@@ -11,8 +11,8 @@ const Navbar = () => {
   return (
     <nav className="bg-sky-700 p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white text-lg font-semibold">
-          <Link to="/">MyApp</Link>
+        <div className="text-white text-lg font-semibold text-xl">
+          <Link to="/"><span className='text-5xl'>A</span>lumni Nexus</Link>
         </div>
 
         <button
@@ -57,12 +57,12 @@ const Navbar = () => {
           >
             About
           </Link>
-          <Link
-            to="/services"
+          <a
+            href="#services"
             className="block text-white hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium"
           >
             Services
-          </Link>
+          </a>
           <Link
             to="/contact"
             className="block text-white hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium"

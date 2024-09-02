@@ -4,7 +4,7 @@ button {
     --color: #560bad;
     font-family: inherit;
     display: inline-block;
-    width: 8em;
+    width: 10em;
     height: 2.6em;
     line-height: 2.5em;
     margin: 20px;
@@ -16,8 +16,9 @@ button {
     z-index: 1;
     font-size: 17px;
     border-radius: 6px;
-    font-weight: 500;
+    font-weight: 1000;
     color: var(--color);
+
   }
   
   button:before {
@@ -26,7 +27,7 @@ button {
     z-index: -1;
     background: var(--color);
     height: 150px;
-    width: 200px;
+    width: 300px;
     border-radius: 50%;
   }
   
@@ -50,32 +51,12 @@ button {
     transition: background 0s;
   }
 
-  .underline {
-    position: relative;
-    text-decoration: none;
-    color: #e6dddd; /* Adjust text color as needed */
-    padding-bottom: 0.2em; /* Add space to make room for the underline */
-  }
-  
-  .underline::after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0; /* Position at the bottom of the text */
-    width: 100%;
-    height: 0.2em; /* Initial height of the underline */
-    background-image: linear-gradient(120deg, #34c0f9 0%, #34c0f9 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 100%; /* Full width and height of the underline */
-    background-position: 0 100%;
-    transition: height 0.25s ease-in; /* Smooth transition for height */
-    z-index: -1; /* Make sure the underline is behind the text */
-  }
-  
-  .underline:hover::after {
+  .underline:hover {
     height: 100%; /* Increase height to cover text on hover */
     background-position: 0 0; /* Adjust background position if needed */
+    background-color: rgb(249, 249, 119);
+    text-decoration: solid;
+    color: black;
   }
  /* From Uiverse.io by alexruix */ 
 .card {
@@ -122,7 +103,7 @@ button {
    
    /*Text*/
    .text-title {
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
    }
    
@@ -150,3 +131,89 @@ button {
   margin-left: 6rem; /* Adjust as needed */
   margin-right: 6rem; /* Adjust as needed */
 }
+/* service */
+/* From Uiverse.io by gharsh11032000 */ 
+.cards {
+  width: 300px;
+  height: 400px;
+  /* background-color: #4158D0; */
+  /* background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); */
+  border-radius: 8px;
+  color: white;
+  overflow: hidden;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  cursor: pointer;
+}
+
+.cards-content {
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.cards-content .cards-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+.cards-content .cards-para {
+  color: inherit;
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+.cards:hover {
+  transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cards:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  z-index: 1;
+}
+
+.cards:hover:before {
+  transform: translateX(-100%);
+}
+
+.cards:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  z-index: 1;
+}
+
+.cards:hover:after {
+  transform: translateX(100%);
+}
+
+
+
+
+
+

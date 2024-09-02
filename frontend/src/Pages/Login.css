@@ -1,0 +1,24 @@
+/* Styles for the floating label effect */
+.relative {
+    position: relative;
+  }
+  
+  input:focus + label,
+  input:not(:placeholder-shown) + label {
+    transform: translateY(-1.9rem) scale(0.90); /* Move label up and shrink */
+    background-color: white; /* Match the input background */
+    /* padding: 0 0.25rem; Small padding to fit label within border */
+    color: #3b82f6; /* Blue color for focused label */
+  }
+  
+  label {
+    pointer-events: none;
+    top: 50%;
+    left: 0.75rem;
+    position: absolute;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+    background-color: white; /* Match the input background */
+    padding: 0 0.25rem; /* Small padding to fit label within border */
+  }
+  
