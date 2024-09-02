@@ -1,0 +1,152 @@
+/* From Uiverse.io by cssbuttons-io */ 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+button {
+    --color: #560bad;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+  }
+  
+  button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+  }
+  
+  button:hover {
+    color: #fff;
+  }
+  
+  button:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+  }
+  
+  button:hover:before {
+    top: -30px;
+    left: -30px;
+  }
+  
+  button:active:before {
+    background: #3a0ca3;
+    transition: background 0s;
+  }
+
+  .underline {
+    position: relative;
+    text-decoration: none;
+    color: #e6dddd; /* Adjust text color as needed */
+    padding-bottom: 0.2em; /* Add space to make room for the underline */
+  }
+  
+  .underline::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Position at the bottom of the text */
+    width: 100%;
+    height: 0.2em; /* Initial height of the underline */
+    background-image: linear-gradient(120deg, #34c0f9 0%, #34c0f9 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%; /* Full width and height of the underline */
+    background-position: 0 100%;
+    transition: height 0.25s ease-in; /* Smooth transition for height */
+    z-index: -1; /* Make sure the underline is behind the text */
+  }
+  
+  .underline:hover::after {
+    height: 100%; /* Increase height to cover text on hover */
+    background-position: 0 0; /* Adjust background position if needed */
+  }
+ /* From Uiverse.io by alexruix */ 
+.card {
+    width: 260px;
+    height: 554px;
+    border-radius: 5px;
+    border-top-right-radius: 30px;
+    background: #f5f5f5;
+    position: relative;
+    /* padding: 1.8rem; */
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
+   }
+ 
+   .card-details {
+    color: black;
+    height: 100%;
+    gap: .5em;
+    display: grid;
+    padding:0 1.8rem;
+    place-content: center;
+   }
+   
+   .card-button {
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #008bf8;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+   }
+   
+   .text-body {
+    color: rgb(134, 134, 134);
+   }
+   
+   /*Text*/
+   .text-title {
+    font-size: 1.5em;
+    font-weight: bold;
+   }
+   
+   /*Hover*/
+   .card:hover {
+    border-color: #008bf8;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+   }
+   
+   .card:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+   }
+    
+   /* Importing the Poppins font from Google Fonts */
+
+
+.h1 {
+  font-family: 'Poppins', sans-serif;
+  /* Additional styling for h1 */
+  font-size: 2.5rem; /* Adjust as needed */
+  font-weight: 600; /* Semi-bold weight */
+  color: #333; /* Darker text color for better contrast */
+  margin-top: 7rem; /* Adjust as needed */
+  margin-left: 6rem; /* Adjust as needed */
+  margin-right: 6rem; /* Adjust as needed */
+}
